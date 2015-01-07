@@ -1,5 +1,5 @@
 package il.ac.hit.couponsproject.configuration.constants;
-//change
+
 import java.text.SimpleDateFormat;
 
 /**
