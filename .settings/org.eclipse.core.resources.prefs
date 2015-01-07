@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/tags/showCoupon.tag=UTF-8
+encoding//src/il/ac/hit/couponsproject/model/dao/impl/hibernate/HibernateCouponDAO.java=UTF-8
+encoding/<project>=UTF-8

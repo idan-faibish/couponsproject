@@ -1,0 +1,23 @@
+2015-01-05 16:37:18 INFO  - the servlet has been initialized successfully
+2015-01-05 16:37:21 INFO  - the servlet has been destroyed successfully 
+
+2015-01-05 23:47:57 INFO  - the servlet has been initialized successfully
+2015-01-05 23:48:08 INFO  - the login of the user: admin finished successfully
+2015-01-05 23:48:11 INFO  - succeeded to retrieve the coupons
+2015-01-05 23:48:13 INFO  - succeeded to get coupon with id: 142
+2015-01-05 23:48:19 INFO  - the user has logged out successfully(session: 287E1A2C2E5A03D1A7DC2D8D05C551FF)
+2015-01-05 23:48:20 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-05 23:48:22 INFO  - succeeded to add coupon with id: 156 to favorites of session: 287E1A2C2E5A03D1A7DC2D8D05C551FF
+2015-01-05 23:48:25 INFO  - succeeded to add coupon with id: 155 to favorites of session: 287E1A2C2E5A03D1A7DC2D8D05C551FF
+2015-01-05 23:48:25 INFO  - successfully updated the favorites coupons and remove the expired coupons, of session: 287E1A2C2E5A03D1A7DC2D8D05C551FF
+2015-01-05 23:48:27 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-05 23:48:28 INFO  - succeeded to delete coupon with id: 156 from favorites of session: 287E1A2C2E5A03D1A7DC2D8D05C551FF
+2015-01-05 23:48:29 INFO  - succeeded to add coupon with id: 156 to favorites of session: 287E1A2C2E5A03D1A7DC2D8D05C551FF
+2015-01-05 23:48:29 INFO  - successfully updated the favorites coupons and remove the expired coupons, of session: 287E1A2C2E5A03D1A7DC2D8D05C551FF
+2015-01-05 23:48:31 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-05 23:48:31 INFO  - succeeded to delete coupon with id: 156 from favorites of session: 287E1A2C2E5A03D1A7DC2D8D05C551FF
+2015-01-05 23:48:33 INFO  - succeeded to delete coupon with id: 155 from favorites of session: 287E1A2C2E5A03D1A7DC2D8D05C551FF
+2015-01-05 23:48:34 INFO  - succeeded to retrieve the three closest coupons to longitude: 34.7986684 latitude: 31.9573555
+2015-01-05 23:48:40 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-05 23:48:46 INFO  - the servlet has been destroyed successfully 
+

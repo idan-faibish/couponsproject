@@ -1,0 +1,319 @@
+/* CSS of Main Page */
+html {
+	overflow-x: hidden;
+}
+
+#main-page-header-wrapper, #admin-login-header-wrapper, #admin-page-header-wrapper {
+	background: linear-gradient(white, darkgray);
+}
+
+#main-page-header-wrapper {
+	margin-top: 10px;
+	border: 1px solid #E5E5E5;
+}
+
+#main-page-header-wrapper>h1, #admin-login-header-wrapper>h1, #admin-page-header-wrapper>h1 {
+	text-align: center;
+	font-weight: bold;
+}
+
+#main-page-buttons-wrapper>div {
+	margin-top: 20px;
+}
+
+#admin-login-submit-button {
+	margin-top: 20px;
+}
+
+.loading-gif {
+	width: 64px;
+	height: 64px;
+	display: none;
+}
+
+#hidden-submit {
+	display: none;
+}
+
+.success-highlight {
+	color: green;
+	font-weight: bold;
+}
+
+.fail-highlight {
+	color: red;
+	font-weight: bold;
+}
+
+.btn {
+	white-space: normal;
+}
+
+/*CSS of Admin Page */
+#admin-page-add-button>button, #admin-page-update-button>button, #admin-page-remove-button>button {
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#buttons-admin-page-wrapper, #buttons-guest-page-wrapper {
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.admin-coupons-table-wrapper {
+	overflow-y: scroll;
+	width: 100%;
+	height: 500px;
+}
+
+#admin-coupons-table caption {
+	color: blue;
+	text-align: center;
+	font-size: 30px;
+	border: 2px dashed blue;
+	margin-bottom: 10px
+}
+
+#admin-coupons-table>tbody {
+	display: none;
+}
+
+#admin-coupons-table .description-td {
+	width: 450px;
+	height: 75px;
+}
+
+#admin-coupons-table .description-td .description-div {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.admin-coupons-table-wrapper table tbody tr td:nth-child(8), .admin-coupons-table-wrapper table thead tr th:nth-child(8)
+	{
+	max-width: 400px;
+	table-layout: fixed;
+	overflow-wrap: break-word;
+}
+
+#add-coupon-dialog-form .add-coupon-dialog-input div, #update-coupon-dialog-form .update-coupon-dialog-input div,
+	#delete-coupon-dialog-form .delete-coupon-dialog-input div {
+	margin-bottom: 20px;
+}
+
+#add-coupon-dialog-form .add-coupon-dialog-input textarea, #update-coupon-dialog-form .update-coupon-dialog-input textarea
+	{
+	resize: none;
+}
+
+#add-coupon-dialog-form .add-coupon-dialog-input #add-expiration-date, #update-coupon-dialog-form .update-coupon-dialog-input #update-expiration-date,
+	#add-coupon-dialog-form .add-coupon-dialog-input #add-expiration-time, #update-coupon-dialog-form .update-coupon-dialog-input #update-expiration-time
+	{
+	background-color: white;
+	cursor: text;
+}
+
+#add-coupon-dialog-form .add-coupon-dialog-input #add-expiration-time {
+	padding-left: 150px;
+}
+
+#update-coupon-dialog-form .update-coupon-dialog-input #update-expiration-time {
+	padding-left: 180px;
+}
+
+:required {
+	border: 2px solid red;
+}
+
+input:invalid {
+	border: 2px solid red;
+	background: url("images/error.png") no-repeat left;
+}
+
+.input-text:valid {
+	border: 2px solid green;
+	background: url("images/valid.png") no-repeat left;
+}
+
+.invalid-red {
+	background: url("images/error.png") no-repeat left;
+	border: 2px solid red;
+}
+
+.valid-green {
+	background: url("images/valid.png") no-repeat left;
+	border: 2px solid green;
+}
+
+#result-message, #update-result-message, #delete-result-message {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#not-connected, #favorites-coupons, #wrong-parameters-closest-coupon, #wrong-session-coupons {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#not-connected>span, #favorites-coupons>span, #wrong-parameters-closest-coupon>span,
+	#wrong-session-coupons>span {
+	font-size: 30px;
+}
+
+#favorites-coupons {
+	margin-bottom: 40px;
+}
+
+.go-to-main-page, .go-to-guest-page {
+	float: left;
+	margin-left: 170px;
+}
+
+.coupon-overview {
+	padding: 0;
+	text-align: center;
+	border: 1px solid red;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.coupon-overview div {
+	height: 81px;
+	border-left: 2px dashed red;
+}
+
+.coupon-overview div:nth-child(5) {
+	border-left: none;
+	padding: 0;
+}
+
+.coupon-overview div img {
+	width: 222px;
+	height: 71px;
+}
+
+.coupon-overview div span {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.coupon-overview div {
+	overflow-y: auto;
+}
+
+a.thumbnail {
+	margin-bottom: 0;
+}
+
+.accordion-wrapper #accordion {
+	width: 50%;
+	margin: 0 auto;
+}
+
+span.glyphicon-star-empty, span.glyphicon-star {
+	font-size: 3em;
+}
+
+.coupon-star {
+	margin-top: 20px;
+}
+
+#closest-coupon-button-wrapper>button {
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/************************/
+/******Coupon CSS******/
+/************************/
+.coupon {
+	width: 75%;
+	height: 200px;
+	border: 3px dotted #FF0000;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	background-color: #D0D0D0;
+}
+
+.coupon-category {
+	font-size: 18px;
+	font-weight: bold;
+	font-family: courier;
+	color: #800040;
+	margin-bottom: 10px;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.coupon-name {
+	font-size: 18px;
+	font-weight: bold;
+	font-family: courier;
+	color: red;
+	margin-bottom: 20px;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.coupon-description {
+	color: #0000A0;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: courier;
+	height: 110px;
+	overflow-y: auto;
+	text-align: center;
+	font-style: italic;
+}
+
+.coupon-picture {
+	width: 395px;
+	padding: 0;
+}
+
+.coupon-expiration-date {
+	text-align: center;
+	height: 40%;
+	margin-bottom: 25%;
+}
+
+.coupon-price {
+	text-align: center;
+}
+
+.thumbnail img {
+	width: 400px;
+	height: 182px;
+}
+
+.coupon-middle-content {
+	height: 175px;
+	padding: 0;
+}
+
+.coupon-left-content {
+	height: 175px;
+}
+
+.original-price {
+	text-decoration: line-through;
+}
+
+.new-price {
+	font-size: 22px;
+	color: blue;
+}
+
+.coupon-expiration-date span {
+	font-size: 18px;
+	color: green;
+	font-weight: bold;
+}
