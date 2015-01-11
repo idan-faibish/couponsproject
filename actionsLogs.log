@@ -52,3 +52,8 @@
 2015-01-08 01:34:26 INFO  - the servlet has been initialized successfully
 2015-01-08 01:34:34 INFO  - the servlet has been destroyed successfully 
 
+2015-01-11 14:24:38 INFO  - the servlet has been initialized successfully
+2015-01-11 14:24:55 INFO  - the login of the user: admin finished successfully
+2015-01-11 14:24:58 INFO  - succeeded to retrieve the coupons
+2015-01-11 14:26:30 INFO  - the servlet has been destroyed successfully 
+

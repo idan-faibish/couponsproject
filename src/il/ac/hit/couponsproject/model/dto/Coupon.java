@@ -206,4 +206,6 @@ public class Coupon implements Serializable {
 				+ ", value=" + value + ", percentDiscount=" + percentDiscount + ", expirationDate=" + expirationDate
 				+ ", picURL=" + picURL + ", longitude=" + longitude + ", latitude=" + latitude + "]";
 	}
+	
+	
 }
