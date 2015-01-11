@@ -116,6 +116,9 @@ public class Controller extends HttpServlet {
 		doProcess(request, response);
 	}
 
+	/**
+	 * this method is responsible for freeing up resources (in our case its removing the admin user from the DB)
+	 */
 	@Override
 	public void destroy() {
 		super.destroy();
