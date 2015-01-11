@@ -11,6 +11,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Coupons - Main Page</title>
+<%------------------%>
+<%--------CSS-------%>
+<%------------------%>
 <link rel="stylesheet" href="<%=contextPath%>/css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="<%=contextPath%>/css/bootstrap/bootstrap-rtl.min.css" />
 <link rel="stylesheet" href="<%=contextPath%>/css/style.css" />
@@ -47,6 +50,9 @@
 			</form>
 		</section>
 	</div>
+	<%------------------%>
+	<%------Scripts-----%>
+	<%------------------%>
 	<script src="<%=contextPath%>/js/jquery/jquery-2.1.1.min.js"></script>
 	<script src="<%=contextPath%>/js/script.js"></script>
 </body>
