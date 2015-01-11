@@ -3,7 +3,7 @@ package il.ac.hit.couponsproject.model.dao.logic;
 import il.ac.hit.couponsproject.model.dto.User;
 
 /**
- * This DAO interface is declaring some basic operations about Users systemswhich interacting with any kind of DB. <br/>
+ * This DAO interface is declaring some basic operations about users systems which interacting with any kind of DB. <br/>
  * Classes which about to implement this interface will need to provide all the services that this interface is
  * offering.
  * 

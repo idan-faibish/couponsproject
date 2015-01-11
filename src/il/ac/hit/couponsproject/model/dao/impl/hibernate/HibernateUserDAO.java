@@ -15,7 +15,7 @@ import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
  * This DAO is a singleton implementation of the IUserDAO interface.<br/>
- * This implementation provides a convenient way of working with coupons systems,<br/>
+ * This implementation provides a convenient way of working with users systems,<br/>
  * and it uses Hibernate (and MySQL) as the underlying DB for storing the data.
  * 
  * @author Idan Faibish
