@@ -7,13 +7,16 @@
 	String contextPath = request.getContextPath();
 %>
 <%-------------------------------------------------------------------------------------------%>
-<%-----------This page shows to the guest the coupons he chose in the guest page-------------%>
+<%--------------This page shows to the guest user the 3 closest coupons to him---------------%>
 <%-------------------------------------------------------------------------------------------%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Closest Coupons to the User</title>
+<%------------------%>
+<%--------CSS-------%>
+<%------------------%>
 <link rel="stylesheet" href="<%=contextPath%>/css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="<%=contextPath%>/css/bootstrap/bootstrap-rtl.min.css" />
 <link rel="stylesheet" href="<%=contextPath%>/css/style.css" />
@@ -27,16 +30,19 @@
 		<span class="glyphicon glyphicon-info-sign" aria-hidden="true">&nbsp;</span>
 		<span>הקופונים הקרובים ביותר למיקומך</span>
 	</div>
+	<%--shows the closest coupons to the guest user--%>
 	<%
 		Collection<Coupon> coupons = (Collection<Coupon>) request.getAttribute(IConstants.ATTR_THREE_CLOSEST_COUPONS);
 	%>
 	<%
 		if (coupons != null) {
 	%>
+	<%--------showCouponsList custom tag-------%>
 	<customtag:showCouponsList listOfCoupons="<%=coupons%>" />
 	<%
 		} else {
 	%>
+	<%--shows an error message in case there was a problem in getting the closest coupons--%>
 	<div id="wrong-parameters-closest-coupon" class="alert alert-danger" role="alert">
 		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">&nbsp;</span>
 		<span>משתמש יקר, לא ניתן היה להחזיר את הקופון הקרוב אלייך (לא היה ניתן לחשב את מיקומך או שאין נתונים במערכת הקופונים)</span>
@@ -49,6 +55,9 @@
 	<%
 		}
 	%>
+	<%------------------%>
+	<%------Scripts-----%>
+	<%------------------%>
 	<script src="<%=contextPath%>/js/jquery/jquery-2.1.1.min.js"></script>
 </body>
 </html>

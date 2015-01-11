@@ -12,6 +12,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Guest Page</title>
+<%------------------%>
+<%--------CSS-------%>
+<%------------------%>
 <link rel="stylesheet" href="<%=contextPath%>/css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="<%=contextPath%>/css/bootstrap/bootstrap-rtl.min.css" />
 <link rel="stylesheet" href="<%=contextPath%>/css/jquery/jquery-ui.min.css" />
@@ -95,6 +98,10 @@
 		</div>
 	</div>
 	<input hidden type="text" id="context-path" value="<%=contextPath%>" />
+	
+	<%------------------%>
+	<%------Scripts-----%>
+	<%------------------%>
 	<script src="<%=contextPath%>/js/jquery/jquery-2.1.1.min.js"></script>
 	<script src="<%=contextPath%>/js/bootstrap/bootstrap.min.js"></script>
 	<script src="<%=contextPath%>/js/jquery/jquery.geocomplete.js"></script>

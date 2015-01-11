@@ -11,6 +11,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Admin Login Page</title>
+<%------------------%>
+<%--------CSS-------%>
+<%------------------%>
 <link rel="stylesheet" href="<%=contextPath%>/css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="<%=contextPath%>/css/bootstrap/bootstrap-rtl.min.css" />
 <link rel="stylesheet" href="<%=contextPath%>/css/style.css" />
@@ -59,6 +62,9 @@
 		<input type="submit" id="hidden-submit" name="<%=IConstants.ACTION%>" value="<%=IConstants.FORWARD_TO_ADMIN_PAGE_ACTION%>" />
 	</form>
 
+	<%------------------%>
+	<%------Scripts-----%>
+	<%------------------%>
 	<script src="<%=contextPath%>/js/jquery/jquery-2.1.1.min.js"></script>
 	<script src="<%=contextPath%>/js/adminLoginPage.js"></script>
 </body>

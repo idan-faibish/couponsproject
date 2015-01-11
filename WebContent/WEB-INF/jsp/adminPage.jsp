@@ -3,14 +3,17 @@
 <%
 	String contextPath = request.getContextPath();
 %>
-<%-------------------------------------------------------------------------------------------%>
-<%-------------	This is the admin page, letting the admin to make different operations-------%>
-<%-------------------------------------------------------------------------------------------%>
+<%------------------------------------------------------------------------------------------------------%>
+<%-------------	This is the admin page, letting the admin to make different manageable operations-------%>
+<%------------------------------------------------------------------------------------------------------%>
 <!DOCTYPE html>
 <html dir="rtl">
 <head>
 <meta charset="UTF-8">
 <title>Admin Page</title>
+<%------------------%>
+<%--------CSS-------%>
+<%------------------%>
 <link rel="stylesheet" href="<%=contextPath%>/css/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="<%=contextPath%>/css/bootstrap/bootstrap-rtl.min.css" />
 <link rel="stylesheet" href="<%=contextPath%>/css/jquery/jquery-ui.min.css" />
@@ -303,6 +306,9 @@
 	<%
 		}
 	%>
+	<%------------------%>
+	<%------Scripts-----%>
+	<%------------------%>
 	<script src="<%=contextPath%>/js/jquery/jquery-2.1.1.min.js"></script>
 	<script src="<%=contextPath%>/js/bootstrap/bootstrap.min.js"></script>
 	<script src="<%=contextPath%>/js/jquery/jquery-ui.min.js"></script>
