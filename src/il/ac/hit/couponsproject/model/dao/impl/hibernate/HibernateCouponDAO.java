@@ -1,7 +1,6 @@
 package il.ac.hit.couponsproject.model.dao.impl.hibernate;
 
 import il.ac.hit.couponsproject.configuration.constants.IConstants;
-import il.ac.hit.couponsproject.controller.Controller;
 import il.ac.hit.couponsproject.model.dao.logic.ICouponDAO;
 import il.ac.hit.couponsproject.model.dto.Coupon;
 import il.ac.hit.couponsproject.model.exception.CouponException;
@@ -66,10 +65,6 @@ public class HibernateCouponDAO implements ICouponDAO {
 			Collection<Coupon> coupons = session.createQuery(query).list();
 			return coupons;
 		} catch (HibernateException e) {
-			/*
-			 * Controller.LOGGER.info(IConstants.SIMPLE_FORMAT.format(new Date()) +
-			 * " - something go wrong with getting the coupons from the DB");
-			 */
 			throw new CouponException("failed to get the coupons collection", e);
 		} finally {
 			if (session != null) {
@@ -93,18 +88,10 @@ public class HibernateCouponDAO implements ICouponDAO {
 			session = factory.openSession();
 			Coupon coupon = (Coupon) session.get(Coupon.class, id);
 			if (coupon == null) {
-				/*
-				 * Controller.LOGGER.info(IConstants.SIMPLE_FORMAT.format(new Date()) +
-				 * " - cannot get the coupon with id: " + id + ", since he isn't exists in the DB");
-				 */
 				throw new CouponException("the coupon with id=" + id + " doesn't exist");
 			}
 			return coupon;
 		} catch (HibernateException e) {
-			/*
-			 * Controller.LOGGER.info(IConstants.SIMPLE_FORMAT.format(new Date()) +
-			 * " - something go wrong with getting the coupon with id: "+id+" from the DB");
-			 */
 			throw new CouponException("failed to get coupon with id=" + id, e);
 		} finally {
 			if (session != null) {
@@ -132,10 +119,6 @@ public class HibernateCouponDAO implements ICouponDAO {
 		} catch (HibernateException e) {
 			if (transaction != null) {
 				transaction.rollback();
-				/*
-				 * Controller.LOGGER.info(IConstants.SIMPLE_FORMAT.format(new Date()) +
-				 * " - something go wrong in adding the coupon with id: "+coupon.getId()+" to the DB --->rolledback");
-				 */
 			}
 			throw new CouponException("failed to add coupon with id=" + coupon.getId(), e);
 		} finally {
@@ -165,10 +148,6 @@ public class HibernateCouponDAO implements ICouponDAO {
 		} catch (HibernateException e) {
 			if (transaction != null) {
 				transaction.rollback();
-				/*
-				 * Controller.LOGGER.info(IConstants.SIMPLE_FORMAT.format(new Date()) +
-				 * " - something go wrong in deleting the coupon with id: " + id + " from the DB");
-				 */
 			}
 			throw new CouponException("failed to delete the coupon with id=" + id, e);
 		} finally {
@@ -197,10 +176,6 @@ public class HibernateCouponDAO implements ICouponDAO {
 		} catch (HibernateException e) {
 			if (transaction != null) {
 				transaction.rollback();
-				/*
-				 * Controller.LOGGER.info(IConstants.SIMPLE_FORMAT.format(new Date()) +
-				 * " - something go wrong in updating the coupon with id: " + coupon.getId() + " in the DB");
-				 */
 			}
 			throw new CouponException("failed to update the coupon with id=" + coupon.getId(), e);
 		} finally {
@@ -237,16 +212,8 @@ public class HibernateCouponDAO implements ICouponDAO {
 			if (coupons.size() != 0) {
 				return coupons;
 			}
-			/*
-			 * Controller.LOGGER.info(IConstants.SIMPLE_FORMAT.format(new Date()) +
-			 * " - failed to retrieve the three closest coupons since the DB is empty out of coupons");
-			 */
 			throw new CouponException("The DB is empty out of non-expired coupons");
 		} catch (HibernateException e) {
-			/*
-			 * Controller.LOGGER.info(IConstants.SIMPLE_FORMAT.format(new Date()) +
-			 * " - something go wrong in getting the three closest coupons from the DB");
-			 */
 			throw new CouponException("failed to get the three closeset coupons", e);
 		} finally {
 			if (session != null) {
@@ -275,10 +242,6 @@ public class HibernateCouponDAO implements ICouponDAO {
 			Collection<Coupon> coupons = queryObject.list();
 			return coupons;
 		} catch (HibernateException e) {
-			/*
-			 * Controller.LOGGER.info(IConstants.SIMPLE_FORMAT.format(new Date()) +
-			 * " - something go wrong with getting the non-expired coupons from the DB");
-			 */
 			throw new CouponException("failed to get non-expired coupons collection", e);
 		} finally {
 			if (session != null) {
