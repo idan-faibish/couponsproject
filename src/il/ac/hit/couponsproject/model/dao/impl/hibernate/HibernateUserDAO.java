@@ -40,7 +40,7 @@ public class HibernateUserDAO implements IUserDAO {
 	 * prevents the users from directly instantiate objects of this class
 	 */
 	private HibernateUserDAO() {
-		factory = new AnnotationConfiguration().configure().buildSessionFactory();
+		factory = HibernateSessionFactory.getInstance().getSessionFactory();
 	}
 
 	/**

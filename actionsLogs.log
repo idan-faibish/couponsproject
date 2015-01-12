@@ -57,3 +57,38 @@
 2015-01-11 14:24:58 INFO  - succeeded to retrieve the coupons
 2015-01-11 14:26:30 INFO  - the servlet has been destroyed successfully 
 
+2015-01-12 17:58:14 INFO  - the servlet has been initialized successfully
+2015-01-12 17:58:29 INFO  - the servlet has been initialized successfully
+2015-01-12 17:58:44 INFO  - the login of the user: admin finished successfully
+2015-01-12 17:58:47 INFO  - succeeded to retrieve the coupons
+2015-01-12 17:59:17 INFO  - succeeded to add coupon with id: 105
+2015-01-12 17:59:17 INFO  - succeeded to retrieve the coupons
+2015-01-12 17:59:34 ERROR - failed to add coupon with id: 105
+2015-01-12 17:59:34 INFO  - succeeded to retrieve the coupons
+2015-01-12 17:59:40 INFO  - succeeded to get coupon with id: 105
+2015-01-12 17:59:45 INFO  - succeeded to update coupon id: 105
+2015-01-12 17:59:45 INFO  - succeeded to retrieve the coupons
+2015-01-12 17:59:59 INFO  - succeeded to delete coupon with id: 105
+2015-01-12 17:59:59 INFO  - succeeded to retrieve the coupons
+2015-01-12 18:00:05 INFO  - the user has logged out successfully(session: 5A8500A27F17519E167007558F4B41F1)
+2015-01-12 18:00:05 INFO  - the user has logged out successfully(session: 5A8500A27F17519E167007558F4B41F1)
+2015-01-12 18:00:05 INFO  - the user has logged out successfully(session: 5A8500A27F17519E167007558F4B41F1)
+2015-01-12 18:00:05 INFO  - the user has logged out successfully(session: 5A8500A27F17519E167007558F4B41F1)
+2015-01-12 18:00:05 INFO  - the user has logged out successfully(session: 5A8500A27F17519E167007558F4B41F1)
+2015-01-12 18:00:06 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-12 18:00:13 INFO  - successfully updated the favorites coupons and remove the expired coupons, of session: 5A8500A27F17519E167007558F4B41F1
+2015-01-12 18:00:14 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-12 18:00:15 INFO  - succeeded to add coupon with id: 200 to favorites of session: 5A8500A27F17519E167007558F4B41F1
+2015-01-12 18:00:16 INFO  - succeeded to add coupon with id: 150 to favorites of session: 5A8500A27F17519E167007558F4B41F1
+2015-01-12 18:00:17 INFO  - successfully updated the favorites coupons and remove the expired coupons, of session: 5A8500A27F17519E167007558F4B41F1
+2015-01-12 18:00:19 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-12 18:00:20 INFO  - succeeded to delete coupon with id: 200 from favorites of session: 5A8500A27F17519E167007558F4B41F1
+2015-01-12 18:00:21 INFO  - successfully updated the favorites coupons and remove the expired coupons, of session: 5A8500A27F17519E167007558F4B41F1
+2015-01-12 18:00:22 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-12 18:00:24 INFO  - succeeded to delete coupon with id: 150 from favorites of session: 5A8500A27F17519E167007558F4B41F1
+2015-01-12 18:00:25 INFO  - successfully updated the favorites coupons and remove the expired coupons, of session: 5A8500A27F17519E167007558F4B41F1
+2015-01-12 18:00:25 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-12 18:00:26 INFO  - succeeded to retrieve the three closest coupons to longitude: 34.7723825 latitude: 32.0140167
+2015-01-12 18:00:29 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-12 18:00:35 INFO  - the servlet has been destroyed successfully 
+

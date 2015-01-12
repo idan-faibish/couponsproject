@@ -33,7 +33,7 @@ public class HibernateCouponDAO implements ICouponDAO {
 
 	/* prevents the users from directly instantiate objects of this class */
 	private HibernateCouponDAO() {
-		factory = new AnnotationConfiguration().configure().buildSessionFactory();
+		factory = HibernateSessionFactory.getInstance().getSessionFactory();
 	}
 
 	/**

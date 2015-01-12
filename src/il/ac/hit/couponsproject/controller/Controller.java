@@ -106,6 +106,15 @@ public class Controller extends HttpServlet {
 	}
 	
 	/** 
+	 * this method is responsible for handling HTTP GET requests
+	 * 
+	 * @param request
+	 *            the HttpServletRequest object from the client
+	 * @param response
+	 *            response the HttpServletResponse object that will be sent to the client
+	 * @throws ServletException
+	 * @throws IOException
+	 * 
 	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -114,6 +123,15 @@ public class Controller extends HttpServlet {
 	}
 
 	/** 
+	 * this method is responsible for handling HTTP POST requests
+	 * 
+	 * @param request
+	 *            the HttpServletRequest object from the client
+	 * @param response
+	 *            response the HttpServletResponse object that will be sent to the client
+	 * @throws ServletException
+	 * @throws IOException
+	 * 
 	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
