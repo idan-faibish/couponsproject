@@ -105,11 +105,17 @@ public class Controller extends HttpServlet {
 		LOGGER.info("the servlet has been initialized successfully");
 	}
 	
+	/** 
+	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//calling the doProcess method for further processing
 		doProcess(request, response);
 	}
 
+	/** 
+	 * @see javax.servlet.http.HttpServlet#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
 			IOException {
 		//calling the doProcess method for further processing
