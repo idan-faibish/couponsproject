@@ -92,3 +92,45 @@
 2015-01-12 18:00:29 INFO  - succeeded to retrieve the non-expired coupons
 2015-01-12 18:00:35 INFO  - the servlet has been destroyed successfully 
 
+2015-01-13 21:49:22 INFO  - the servlet has been initialized successfully
+2015-01-13 21:49:32 INFO  - the login of the user: admin finished successfully
+2015-01-13 21:49:35 INFO  - succeeded to retrieve the coupons
+2015-01-13 21:49:39 INFO  - succeeded to retrieve the coupons
+2015-01-13 21:49:40 INFO  - the user has logged out successfully(session: AFD8BCF6A966423BB126B7A80193BBCD)
+2015-01-13 21:49:44 INFO  - the login of the user: admin finished successfully
+2015-01-13 21:49:46 INFO  - succeeded to retrieve the coupons
+2015-01-13 21:50:07 INFO  - succeeded to add coupon with id: 102
+2015-01-13 21:50:07 INFO  - succeeded to retrieve the coupons
+2015-01-13 21:50:10 ERROR - failed to add coupon with id: 102
+2015-01-13 21:50:10 INFO  - succeeded to retrieve the coupons
+2015-01-13 21:50:16 INFO  - succeeded to get coupon with id: 102
+2015-01-13 21:50:18 INFO  - succeeded to update coupon id: 102
+2015-01-13 21:50:18 INFO  - succeeded to retrieve the coupons
+2015-01-13 21:50:23 INFO  - the user has logged out successfully(session: AFD8BCF6A966423BB126B7A80193BBCD)
+2015-01-13 21:50:23 INFO  - the user has logged out successfully(session: AFD8BCF6A966423BB126B7A80193BBCD)
+2015-01-13 21:50:23 INFO  - the user has logged out successfully(session: AFD8BCF6A966423BB126B7A80193BBCD)
+2015-01-13 21:50:23 INFO  - the user has logged out successfully(session: AFD8BCF6A966423BB126B7A80193BBCD)
+2015-01-13 21:50:24 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-13 21:50:47 INFO  - the login of the user: admin finished successfully
+2015-01-13 21:50:49 INFO  - succeeded to retrieve the coupons
+2015-01-13 21:50:55 INFO  - succeeded to delete coupon with id: 102
+2015-01-13 21:50:55 INFO  - succeeded to retrieve the coupons
+2015-01-13 21:51:29 INFO  - the user has logged out successfully(session: AFD8BCF6A966423BB126B7A80193BBCD)
+2015-01-13 21:51:29 INFO  - the user has logged out successfully(session: AFD8BCF6A966423BB126B7A80193BBCD)
+2015-01-13 21:51:30 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-13 21:51:31 INFO  - succeeded to add coupon with id: 200 to favorites of session: AFD8BCF6A966423BB126B7A80193BBCD
+2015-01-13 21:51:32 INFO  - succeeded to add coupon with id: 155 to favorites of session: AFD8BCF6A966423BB126B7A80193BBCD
+2015-01-13 21:51:33 INFO  - succeeded to add coupon with id: 653 to favorites of session: AFD8BCF6A966423BB126B7A80193BBCD
+2015-01-13 21:51:35 INFO  - successfully updated the favorites coupons and remove the expired coupons, of session: AFD8BCF6A966423BB126B7A80193BBCD
+2015-01-13 21:51:37 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-13 21:51:39 INFO  - succeeded to delete coupon with id: 200 from favorites of session: AFD8BCF6A966423BB126B7A80193BBCD
+2015-01-13 21:51:40 INFO  - successfully updated the favorites coupons and remove the expired coupons, of session: AFD8BCF6A966423BB126B7A80193BBCD
+2015-01-13 21:51:41 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-13 21:51:43 INFO  - succeeded to delete coupon with id: 155 from favorites of session: AFD8BCF6A966423BB126B7A80193BBCD
+2015-01-13 21:51:43 INFO  - succeeded to delete coupon with id: 653 from favorites of session: AFD8BCF6A966423BB126B7A80193BBCD
+2015-01-13 21:51:44 INFO  - successfully updated the favorites coupons and remove the expired coupons, of session: AFD8BCF6A966423BB126B7A80193BBCD
+2015-01-13 21:51:45 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-13 21:51:48 INFO  - succeeded to retrieve the three closest coupons to longitude: 34.7986603 latitude: 31.9573806
+2015-01-13 21:51:54 INFO  - succeeded to retrieve the non-expired coupons
+2015-01-13 21:51:58 INFO  - the servlet has been destroyed successfully 
+
