@@ -2,10 +2,12 @@ $(document).ready(function() {
 	
 	initializeCouponsInAccordion();
 
+	//disable the default behavior of concatenating the character '#' when clicking on element with 'thumbnail' class
 	$('.panel-body').on('click', '.thumbnail', function(event) {
 		event.preventDefault();
 	});
 
+	//ajax request for adding a coupon to the favorites of the current session
 	$('.panel-body').on('click', '.empty-star', function(event) {
 		event.preventDefault();
 		var idToAdd = $(this).attr('id');
@@ -38,6 +40,7 @@ $(document).ready(function() {
 		});
 	});
 
+	//ajax request for deleting a coupon from the favorites of the current session
 	$('.panel-body').on('click', '.full-star', function(event) {
 		event.preventDefault();
 		var idToRemove = $(this).attr('id');
@@ -70,7 +73,7 @@ $(document).ready(function() {
 		});
 	});
 
-
+	//get the longitude and latitude of the user and forwards him to a page to show him the the closest coupons
 	$('#closest-coupon-button').on('click', function(event) {
 		event.preventDefault();
 		navigator.geolocation.getCurrentPosition(GetLocation);
@@ -79,7 +82,7 @@ $(document).ready(function() {
 });
 
 
-
+//initializing the accordion with the non-expired coupons
 function initializeCouponsInAccordion() {
 	$.ajax({
 		url : '/CouponsProject/Controller',
@@ -135,12 +138,13 @@ function initializeCouponsInAccordion() {
 		}
 	});
 	
+	//refresh the page every 1 minute
 	setInterval(function() {
 		window.location.reload();
 	}, 1000*60);
 }
 
-
+//make sure the non-expired list is show with the right 'full start' or 'empty start' according to a previous choose of the user
 function ajaxResponse() {
 	var favoritesCoupons = $.ajax({
 		url : '/CouponsProject/Controller',
@@ -165,6 +169,10 @@ var GetLocation = function(location) {
 	$('#hidden-input-closest-coupon').click();
 };
 
+/*this function is used to parse date object to string according to the given indicator string:
+dateAndTime ---> yyyy-MM-dd HH:mm
+dateOnly    ---> yyyy-MM-dd
+timeOnly    ---> HH:mm*/
 function dateOrTimeFormatted(dateObject, indicator) {
 	var dateString = '';
 	if (indicator === 'dateAndTime') {

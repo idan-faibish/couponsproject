@@ -70,8 +70,7 @@
 		placeholder : "בחר קטגוריה"
 	});
 
-	// event for submit button of add coupon dialog(triggered by addCoupon
-	// function)
+	// event for submit button of add coupon dialog(triggered by addCoupon function)
 	$('#add-coupon-dialog-form .hidden-add-submit').on('submit', function(event) {
 		var valid = true;
 		valid = valid && $('#add-id').is(':valid');
@@ -126,9 +125,7 @@
 		}
 	});
 
-	// change classes when changing description text areas(both in add-dialog
-	// and
-	// update-dialog)
+	// change classes when changing description text areas(both in add-dialog and update-dialog)
 	$('#add-description, #update-description').on('change', function() {
 		var $this = $(this);
 		if ($this.val() !== '') {
@@ -138,8 +135,7 @@
 		}
 	});
 
-	// change classes when changing expiration dates (both in add-dialog and
-	// update-dialog)
+	// change classes when changing expiration dates (both in add-dialog and update-dialog)
 	$('#add-expiration-date, #update-expiration-date').on('change', function() {
 		var $this = $(this);
 		if ($this.val() !== '') {
@@ -173,6 +169,7 @@
 	// loading the current coupon data of this id from the server
 	$("#update-id").on('click', function() {
 		$.ajax({
+			//using of the RESTful webservice
 			url : '/CouponsProject/services/CouponsService/coupons/'+$(this).select2('val'),
 			type : 'GET',
 			dataType : 'json',
@@ -402,6 +399,11 @@ function updateCoupon() {
 function deleteCoupon() {
 	$('#delete-coupon-dialog-form .hidden-delete-submit').trigger('submit');
 }
+
+/*this function is used to parse date object to string according to the given indicator string:
+dateAndTime ---> yyyy-MM-dd HH:mm
+dateOnly    ---> yyyy-MM-dd
+timeOnly    ---> HH:mm*/
 function dateOrTimeFormatted(dateObject, indicator) {
 	var dateString = '';
 	if (indicator === 'dateAndTime') {

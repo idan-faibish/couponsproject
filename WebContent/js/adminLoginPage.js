@@ -1,4 +1,6 @@
 ﻿$(document).ready(function() {
+	
+	//ajax request for checking if the user is an admin in the application, and forward him in case he is.
 	$('#submit-button').on('click', function(event) {
 		event.preventDefault();
 		$.ajax({
