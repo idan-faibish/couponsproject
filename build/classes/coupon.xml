@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="il.ac.hit.couponsproject.model.dto.Coupon" table="COUPONS">
+		<id name="id" type="int" column="ID">
+		</id>
+
+		<property name="name">
+			<column name="NAME" />
+		</property>
+
+		<property name="description">
+			<column name="DESCRIPTION"></column>
+		</property>
+
+		<property name="category">
+			<column name="CATEGORY"></column>
+		</property>
+
+		<property name="value">
+			<column name="VALUE"></column>
+		</property>
+
+		<property name="percentDiscount">
+			<column name="PERCENT_DISCOUNT"></column>
+		</property>
+
+		<property name="expirationDate">
+			<column name="EXPIRATION_DATE"></column>
+		</property>
+
+		<property name="picURL">
+			<column name="PIC_URL"></column>
+		</property>
+
+		<property name="longitude">
+			<column name="LONGITUDE"></column>
+		</property>
+
+		<property name="latitude">
+			<column name="LATITUDE"></column>
+		</property>
+	</class>
+	<class name="il.ac.hit.couponsproject.model.dto.User" table="ACCESS_PERMISSION">
+		<id name="userName" column="USER_NAME">
+		</id>
+
+		<property name="password">
+			<column name="PASSWORD"></column>
+		</property>
+
+	</class>
+</hibernate-mapping>
