@@ -29,7 +29,7 @@ public class AdminLogoutAction implements IAction {
 	}
 
 	/**
-	 * this method is actually removing the attribute that was exist in the session (that identified the user as an
+	 * this method is actually invalidate the session (that identified the user as an
 	 * admin). after this action, the user needs to login again to gain the admin privileges once again. if the
 	 * operation has finished successfully or not we write an appropriate message in the response
 	 * 
@@ -45,7 +45,8 @@ public class AdminLogoutAction implements IAction {
 		response.setContentType("text/plain");
 		HttpSession session = request.getSession();
 		if (session != null) {
-			session.removeAttribute(IConstants.ATTR_LOGIN_STATUS);
+			//session.removeAttribute(IConstants.ATTR_LOGIN_STATUS);
+			session.invalidate();
 			Controller.LOGGER.info("the user has logged out successfully(session: " + session.getId() + ")");
 			response.getWriter().print(IConstants.SUCCESS);
 		} else {

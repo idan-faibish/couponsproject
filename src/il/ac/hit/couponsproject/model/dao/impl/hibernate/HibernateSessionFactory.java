@@ -22,7 +22,7 @@ public class HibernateSessionFactory {
 	}
 
 	/**
-	 * Invoking this method will provide the the only object of HibernateCouponDAO
+	 * Invoking this method will provide the the only object of HibernateSessionFactory class
 	 * 
 	 * @return the only object of HibernateSessionFactory (because this class is a singleton)
 	 */
@@ -40,5 +40,4 @@ public class HibernateSessionFactory {
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
-	
 }

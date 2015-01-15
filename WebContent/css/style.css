@@ -1,4 +1,6 @@
-/* CSS of Main Page */
+/****************************/
+/****** CSS of Main Page ****/
+/****************************/
 html {
 	overflow-x: hidden;
 }
@@ -48,8 +50,9 @@ html {
 .btn {
 	white-space: normal;
 }
-
-/*CSS of Admin Page */
+/****************************/
+/*****CSS of Admin Page *****/
+/****************************/
 #admin-page-add-button>button, #admin-page-update-button>button, #admin-page-remove-button>button {
 	width: 70%;
 	display: block;
@@ -229,9 +232,9 @@ span.glyphicon-star-empty, span.glyphicon-star {
 	margin-right: auto;
 }
 
-/************************/
-/******Coupon CSS******/
-/************************/
+/****************************/
+/******Coupon style CSS******/
+/****************************/
 .coupon {
 	width: 75%;
 	height: 200px;
