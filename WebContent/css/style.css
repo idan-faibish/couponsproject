@@ -155,7 +155,9 @@ input:invalid {
 	font-weight: bold;
 	text-align: center;
 }
-
+/****************************/
+/*****CSS of Guest Page *****/
+/****************************/
 #not-connected, #favorites-coupons, #wrong-parameters-closest-coupon, #wrong-session-coupons {
 	text-align: center;
 	width: 50%;
