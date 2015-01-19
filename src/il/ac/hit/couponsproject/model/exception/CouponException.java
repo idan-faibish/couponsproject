@@ -1,7 +1,7 @@
 package il.ac.hit.couponsproject.model.exception;
 
 /**
- * an Exception that indicates a malfunction in one of the methods of ICouonDAO implementations.
+ * an Exception that indicates a malfunction in one of the methods of ICouponDAO implementations.
  * 
  * @author Idan Faibish
  * @author Shimi Karaso

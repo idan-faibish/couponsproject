@@ -24,6 +24,7 @@
 <body>
 	<%
 		String loginStatus = (String) session.getAttribute(IConstants.ATTR_LOGIN_STATUS);
+		//check if the user login successfully
 		if (loginStatus != null && loginStatus.equals(IConstants.OK)) {
 	%>
 	<%---------------------%>
@@ -292,6 +293,7 @@
 		</form>
 	</div>
 	<%
+		//show an error message if the user didn't login
 		} else {
 	%>
 	<div id="not-connected" class="alert alert-danger" role="alert">

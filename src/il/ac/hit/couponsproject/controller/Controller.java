@@ -19,6 +19,7 @@ import il.ac.hit.couponsproject.controller.actions.logic.IAction;
 import il.ac.hit.couponsproject.model.dao.impl.hibernate.HibernateUserDAO;
 import il.ac.hit.couponsproject.model.dao.logic.IUserDAO;
 import il.ac.hit.couponsproject.model.dto.User;
+import il.ac.hit.couponsproject.model.exception.UserException;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -84,7 +85,11 @@ public class Controller extends HttpServlet {
 		userToAdd.setPassword(config.getInitParameter(IConstants.PASSWORD));
 
 		loggerConfigure();
-		userDAO.addUser(userToAdd);
+		try {
+			userDAO.addUser(userToAdd);
+		} catch (UserException e) {
+			LOGGER.error("failed to add the user 'admin' to the DB");
+		}
 		if (actionsMap == null) {
 			actionsMap = new HashMap<String, IAction>();
 			addActionsToMap(new AdminLoginAction());
@@ -146,7 +151,11 @@ public class Controller extends HttpServlet {
 	@Override
 	public void destroy() {
 		super.destroy();
-		userDAO.deleteUser("admin");
+		try {
+			userDAO.deleteUser("admin");
+		} catch (UserException e) {
+			LOGGER.error("failed to delete the user 'admin' from the DB");
+		}
 		LOGGER.info("the servlet has been destroyed successfully \n");
 	}
 

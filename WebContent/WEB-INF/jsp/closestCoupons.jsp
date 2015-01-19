@@ -30,16 +30,17 @@
 		<span class="glyphicon glyphicon-info-sign" aria-hidden="true">&nbsp;</span>
 		<span>הקופונים הקרובים ביותר למיקומך</span>
 	</div>
-	<%--shows the closest coupons to the guest user--%>
 	<%
 		Collection<Coupon> coupons = (Collection<Coupon>) request.getAttribute(IConstants.ATTR_THREE_CLOSEST_COUPONS);
 	%>
 	<%
+		//show the closest coupons to the guest user
 		if (coupons != null) {
 	%>
 	<%--------showCouponsList custom tag-------%>
 	<customtag:showCouponsList listOfCoupons="<%=coupons%>" />
 	<%
+		//show an error message in case the collection is null (in case of problem)
 		} else {
 	%>
 	<%--shows an error message in case there was a problem in getting the closest coupons--%>

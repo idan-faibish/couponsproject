@@ -1,8 +1,10 @@
 package il.ac.hit.couponsproject.model.dao.impl.hibernate;
 
 import il.ac.hit.couponsproject.configuration.constants.IConstants;
+import il.ac.hit.couponsproject.controller.Controller;
 import il.ac.hit.couponsproject.model.dao.logic.IUserDAO;
 import il.ac.hit.couponsproject.model.dto.User;
+import il.ac.hit.couponsproject.model.exception.UserException;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -11,7 +13,6 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
  * This DAO is a singleton implementation of the IUserDAO interface.<br/>
@@ -32,7 +33,7 @@ public class HibernateUserDAO implements IUserDAO {
 		try {
 			digester = MessageDigest.getInstance(IConstants.MD5);
 		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
+			Controller.LOGGER.error("no such Algorithm - MD5, when creating HibernateUserDAO object");
 		}
 	}
 
@@ -63,7 +64,7 @@ public class HibernateUserDAO implements IUserDAO {
 	 * @return returns <em>true</em> if the operation was finished successfully, otherwise returns <em>false<em>
 	 */
 	@Override
-	public boolean addUser(User userToAdd) {
+	public void addUser(User userToAdd) throws UserException {
 		Session session = null;
 		Transaction transaction = null;
 		try {
@@ -76,13 +77,15 @@ public class HibernateUserDAO implements IUserDAO {
 			encryptedUser.setPassword(passwordInMD5);
 			session.save(encryptedUser);
 			transaction.commit();
-			return true;
+			//return true;
 		} catch (HibernateException e) {
 			if (transaction != null)
 				transaction.rollback();
-			return false;
+			throw new UserException("failed to add the user with the name: "+userToAdd.getUserName(),e);
+			//return false;
 		} catch (IllegalArgumentException e) {
-			return false;
+			//return false;
+			throw new UserException("failed to add the user with the name: "+userToAdd.getUserName(),e);
 		} finally {
 			if (session != null) {
 				session.close();
@@ -98,7 +101,7 @@ public class HibernateUserDAO implements IUserDAO {
 	 * @return returns <em>true</em> if the operation was finished successfully, otherwise returns <em>false</em>
 	 */
 	@Override
-	public boolean deleteUser(String userName) {
+	public void deleteUser(String userName) throws UserException {
 		Session session = null;
 		Transaction transaction = null;
 		try {
@@ -107,11 +110,12 @@ public class HibernateUserDAO implements IUserDAO {
 			User userToDelete = (User) session.get(User.class, userName);
 			session.delete(userToDelete);
 			transaction.commit();
-			return true;
+			//return true;
 		} catch (HibernateException e) {
 			if (transaction != null)
 				transaction.rollback();
-			return false;
+			//return false;
+			throw new UserException("failed not delete the user with the name: "+userName);
 		} finally {
 			if (session != null) {
 				session.close();

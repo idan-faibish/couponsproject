@@ -22,9 +22,9 @@
 <link rel="stylesheet" href="<%=contextPath%>/css/style.css" />
 </head>
 <body>
-	<%--shows the favorites coupons of the guest user--%>
 	<%
 		List<Coupon> favoritesCoupons = (List<Coupon>) session.getAttribute(IConstants.ATTR_FAVORITES_COUPONS_LIST);
+		//shows the favorites coupons of the guest user
 		if (favoritesCoupons != null && favoritesCoupons.size() != 0) {
 	%>
 	<form action="/CouponsProject/Controller/guest" method="POST">
@@ -38,6 +38,7 @@
 	<%--------showCouponsList custom tag-------%>
 	<customtag:showCouponsList listOfCoupons="<%=favoritesCoupons%>" />
 	<%
+		//show an error message in case the collection is null or his length is 0 (in case the user didnt choose any favorites)
 		} else {
 	%>
 	<%--shows an error message in case the list is empty or not exists--%>
