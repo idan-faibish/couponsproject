@@ -77,14 +77,11 @@ public class HibernateUserDAO implements IUserDAO {
 			encryptedUser.setPassword(passwordInMD5);
 			session.save(encryptedUser);
 			transaction.commit();
-			//return true;
 		} catch (HibernateException e) {
 			if (transaction != null)
 				transaction.rollback();
 			throw new UserException("failed to add the user with the name: "+userToAdd.getUserName(),e);
-			//return false;
 		} catch (IllegalArgumentException e) {
-			//return false;
 			throw new UserException("failed to add the user with the name: "+userToAdd.getUserName(),e);
 		} finally {
 			if (session != null) {
@@ -110,11 +107,9 @@ public class HibernateUserDAO implements IUserDAO {
 			User userToDelete = (User) session.get(User.class, userName);
 			session.delete(userToDelete);
 			transaction.commit();
-			//return true;
 		} catch (HibernateException e) {
 			if (transaction != null)
 				transaction.rollback();
-			//return false;
 			throw new UserException("failed not delete the user with the name: "+userName);
 		} finally {
 			if (session != null) {
